@@ -94,13 +94,13 @@ export default function VerificationForm({ inputLength }) {
   const handleSubmit = async () => {
     const verificationCode = code.join("");
     setLoading(true);
-    const res = await verifyCode({ verificationCode });
 
-    if (!res.success) {
-      setError(res.message);
-      inputRefs.current.forEach(inputRef => inputRef.classList.remove("success"));
-    } else {
+    try {
+      await verifyCode({ verificationCode });
       navigate(`/success?code=${verificationCode}`)
+    } catch (error) {
+      setError(error.message);
+      inputRefs.current.forEach(inputRef => inputRef.classList.remove("success"));
     }
 
     setLoading(false);
