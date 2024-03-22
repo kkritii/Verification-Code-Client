@@ -1,0 +1,135 @@
+:root {
+  --primary: #0daec8;
+  --primary_200: #5cd0e2;
+  --secondary: #45a4ec;
+  --bg: #faf1eb;
+  --dark: #100249;
+  --error: #e86363;
+  --orange: #fb763c;
+  --light: #ffffff;
+  --error_200: #fff9f9;
+  --light_400: #cccccc;
+  --light_800: #898989;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Nunito", sans-serif;
+}
+
+.main{
+  padding: 6rem 4rem;
+  background-color: var(--dark);
+  margin: 5% auto;
+  border: 2px solid #1362ad;
+  border-radius: 5px;
+  color: var(--light);
+}
+
+.input-box {
+  font-size: 3.1rem;
+  text-align: center;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 10px;
+}
+
+.input-box:disabled {
+  cursor: not-allowed;
+  background-color: var(--light_400);
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--secondary);
+  border-radius: 6px;
+  border-width: 0;
+  color: var(--light);
+  cursor: pointer;
+  font-size: 100%;
+  line-height: 1.15;
+  margin-top: 1.5rem;
+  outline: none;
+  overflow: hidden;
+  padding: 10px 25px;
+  text-align: center;
+  transition: background-color 0.2s, box-shadow 0.08s ease-in;
+  user-select: none;
+  -webkit-user-select: none;
+  font-weight: 600;
+}
+
+.btn-secondary {
+  background-color: var(--orange);
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  background-color: var(--light_400);
+  color: var(--light_800);
+  font-weight: 700;
+}
+
+.btn:focus,
+.btn:hover {
+  box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+    rgba(50, 50, 93, 0.2) 0 6px 15px 0, rgba(0, 0, 0, 0.1) 0 2px 2px 0,
+    rgba(50, 151, 211, 0.3) 0 0 0 4px;
+}
+
+.error-box{
+  max-width: 480px;
+  margin: 2rem auto;
+  padding: 0.6rem;
+  border: 3px solid var(--error);
+  background-color: var(--error_200);
+  color: var(--error);
+  font-size: 1.2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.invalid {
+  border: 3px solid red;
+}
+
+.success {
+  border: 3px solid green;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mt-half {
+  margin-top: 0.5rem;
+}
+
+.text-md {
+  font-size: 1.2rem;
+}
+
+.text-center {
+  text-align: center;
+}
