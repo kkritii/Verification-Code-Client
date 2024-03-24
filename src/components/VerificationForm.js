@@ -89,6 +89,7 @@ export default function VerificationForm({ inputLength }) {
   const handleRetry = () => {
     setError('');
     setCode([]);
+    setTimeout(() =>inputRefs.current[0].select());
   }
 
   const handleSubmit = async () => {
