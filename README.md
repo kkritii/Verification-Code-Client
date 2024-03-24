@@ -18,9 +18,9 @@ This project is a frontend application for validating verification codes. It all
 ## Getting Started
 To get started with the project, follow these steps:
 
-1. Clone the repository: git clone git@github.com:kkritii/Verification-Code-Client.git
-2. Install dependencies: yarn
-3. Start the development server: yarn start
+1. Clone the repository: `git clone git@github.com:kkritii/Verification-Code-Client.git`
+2. Install dependencies: `yarn`
+3. Start the development server: `yarn start`
 4. Open your browser and navigate to http://localhost:3000
 
 
