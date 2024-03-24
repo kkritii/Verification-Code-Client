@@ -6,13 +6,13 @@
 This project is a frontend application for validating verification codes. It allows users to enter a verification code and submit it for validation. The application communicates with a backend API to verify the code.
 
 ## Features
-**Code Input**: Users can enter their verification code into an input field.
-**Validation**: The application validates the code by sending it to the backend API.
+**Code Input**: Users can enter their verification code into an input field.<br>
+**Validation**: The application validates the code by sending it to the backend API.<br>
 **Feedback**: Users receive feedback on whether the code is valid or not.
 
 ## Technologies Used
-**React**: The frontend is built using React for the user interface.
-**Axios**: Axios is used for making HTTP requests to the backend API.
+**React**: The frontend is built using React for the user interface.<br>
+**Axios**: Axios is used for making HTTP requests to the backend API.<br>
 **CSS**: Custom CSS is used for styling the application.
 
 ## Getting Started
