@@ -1,7 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import './styles/general.css';
+
 import Home from "./pages/Home.js";
 import SuccessPage from "./pages/Success.js";
+
+import './styles/general.css';
 
 function App() {
   return (

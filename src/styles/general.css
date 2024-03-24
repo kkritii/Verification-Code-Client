@@ -2,9 +2,11 @@
   --primary: #0daec8;
   --primary_200: #5cd0e2;
   --secondary: #45a4ec;
+  --secondary_800: #1362ad;
   --bg: #faf1eb;
   --dark: #100249;
   --error: #e86363;
+  --success: #008000;
   --orange: #fb763c;
   --light: #ffffff;
   --error_200: #fff9f9;
@@ -29,7 +31,7 @@ body {
   padding: 6rem 4rem;
   background-color: var(--dark);
   margin: 5% auto;
-  border: 2px solid #1362ad;
+  border: 2px solid var(--secondary_800);
   border-radius: 5px;
   color: var(--light);
 }
@@ -99,11 +101,11 @@ body {
 }
 
 .invalid {
-  border: 3px solid red;
+  border: 3px solid var(--error);
 }
 
 .success {
-  border: 3px solid green;
+  border: 3px solid var(--success);
 }
 
 .flex {
