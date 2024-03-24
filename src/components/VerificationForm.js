@@ -19,7 +19,7 @@ export default function VerificationForm({ inputLength }) {
   const inputComponents = Array.from(Array(inputLength).keys());
 
   useEffect(() => {
-    let codeString = code.join('');
+    let codeString = code.join("").trim();
     setIsValid(codeString.length === 6 && !isNaN(codeString));
   },[code]);
 
@@ -30,14 +30,14 @@ export default function VerificationForm({ inputLength }) {
     const prevInput = inputRefs.current[index - 1];
     const nextInput = inputRefs.current[index + 1];
 
-    if (isNaN(input.value) || !input.value.trim()) {
+    if (!input.value) {
+      input.classList.remove("invalid", "success");
+    } else if (isNaN(input.value) || !input.value.trim()) {
       input.classList.add("invalid");
       input.classList.remove("success");
-    } else if (input.value.trim()) {
+    } else {
       input.classList.remove("invalid");
       input.classList.add("success");
-    } else {
-      input.classList.remove("invalid", "success");
     }
 
     const newCode = [...code];
@@ -67,7 +67,7 @@ export default function VerificationForm({ inputLength }) {
       setCode(newCode);
 
       if (prevInput) {
-        prevInput.current.focus();
+        prevInput.focus();
       }
     }
   };
@@ -75,7 +75,7 @@ export default function VerificationForm({ inputLength }) {
   const handlePaste = (event) => {
     const pastedCode = event.clipboardData.getData("text");
     const truncatedCode = pastedCode.slice(0, 6);
-    setCode(truncatedCode.split(''));
+    setCode(truncatedCode.split(""));
 
     inputRefs.current.forEach((inputRef, index) => {
       if(isNaN(pastedCode.charAt(index)) || !pastedCode.charAt(index).trim()) {
@@ -87,7 +87,7 @@ export default function VerificationForm({ inputLength }) {
   };
 
   const handleRetry = () => {
-    setError('');
+    setError("");
     setCode([]);
     setTimeout(() =>inputRefs.current[0].select());
   }
@@ -116,7 +116,7 @@ export default function VerificationForm({ inputLength }) {
             maxLength={1}
             className="input-box"
             autoFocus={index === 0}
-            value={code[index] || ''}
+            value={code[index] || ""}
             disabled={loading || error}
             onPaste={handlePaste}
             onFocus={handleFocus}
